@@ -30,18 +30,18 @@
             <div class="container" id="logoAndNav">
 
                 <nav class="navbar navbar-expand-lg">
-                    <button type="button" class="sidebar-toggler btn btn-icon btn-sm rounded-circle" id="sidebarCollapse">
+                    <a type="button" class="sidebar-toggler" id="sidebarCollapse">
                         <span class="sidebar-toggler-default">
                             <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"></path>
+                                <path fill="#ffffff" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"></path>
                             </svg>
                         </span>
-                        <span class="sidebar-toggler-toggled">
-                            <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"></path>
-                            </svg>
-                        </span>
-                    </button>
+                        <!--<span class="sidebar-toggler-toggled">
+        <svg width="14" height="14" viewBox="0 0 18 18" >
+            <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"></path>
+        </svg>
+    </span>-->
+                    </a>
                     <a class="navbar-brand" href="index.html" aria-label="Front">
                         <img src="images/logo.svg" alt="CMS" class="d-block mt-2 logo" />
                     </a>
@@ -193,7 +193,7 @@
 
                         <!-- Heading -->
                         <h1 class="text-center text-md-left">
-                            <span class="badge warning mr-2"> <span class="rounded-circle circle"></span>Critical&Immediate</span> <span class="caseid">#CR/MB/2020/2 </span>Illegal acquisition of personal properties
+                            <span class="badge warning mr-2"> <i></i>Critical&Immediate</span> <span class="caseid">#CR/MB/2020/2 </span>Illegal acquisition of personal properties
 
                         </h1>
 
@@ -256,10 +256,11 @@
                 <div class="row grid">
                     <div class="col-md-4">
                         <div class="card">
+                            <h4>Case Initiation Actions</h4>
                             <div class="nav flex-column nav-pills substeps" id="case-initiation-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#c1" role="tab" aria-controls="v-pills-home" aria-selected="true">Public Information</a>
+                                <a class="nav-link pastactivity active" id="v-pills-home-tab" data-toggle="pill" href="#c1" role="tab" aria-controls="v-pills-home" aria-selected="true"><span class="indicator">4</span> Public Information</a>
                                 <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#c2" role="tab" aria-controls="v-pills-profile" aria-selected="false">STR/SARs</a>
-                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#c3" role="tab" aria-controls="v-pills-messages" aria-selected="false">Other Government Agency Leads</a>
+                                <a class="nav-link completed pastactivity" id="v-pills-messages-tab" data-toggle="pill" href="#c3" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span class="indicator">4</span> Other Government Agency Leads</a>
                                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#c4" role="tab" aria-controls="v-pills-settings" aria-selected="false">FIA Intelligence Trigger </a>
                                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#c5" role="tab" aria-controls="v-pills-settings" aria-selected="false">Private Company Complaints </a>
                                 <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#c6" role="tab" aria-controls="v-pills-settings" aria-selected="false">Press Reports </a>
@@ -276,9 +277,34 @@
 
                     </div>
                     <div class="col-md-8 ">
-                        <div class="card p-3">
+                        <div class="card content p-3"><button id="btn_add" onclick="$('#frm_1593292081').show(300);" class="btn btn-primary ml-auto">Add Activity</button>
                             <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="c1" role="tabpanel">a...</div>
+                                <div class="tab-pane fade show active" id="c1" role="tabpanel"><h3>Public Information</h3>
+                                                                                               <table id="example1" class="table table-striped dataTable">
+                                                                                                   <thead>
+                                                                                                       <tr role="row"><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1">Date</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1">Subject</th><th class="sorting_disabled" role="columnheader" rowspan="1" colspan="1">Added By</th></tr>
+                                                                                                   </thead>
+
+                                                                                                   <tbody role="alert" aria-live="polite" aria-relevant="all">
+                                                                                                       <tr class="odd">
+                                                                                                           <td class=" ">2020-04-02</td>
+                                                                                                           <td class=" "><a href="http://cms.streamhouse.org/document/6/view" class="link-button">Words and reports from people </a></td>
+                                                                                                           <td class=" ">Nyirenda, Dziko Nyirenda</td>
+                                                                                                       </tr>
+                                                                                                       <tr class="even">
+                                                                                                           <td class=" ">2020-04-08</td>
+                                                                                                           <td class=" "><a href="http://cms.streamhouse.org/document/7/view" class="link-button">Testing Stage Completed </a></td>
+                                                                                                           <td class=" ">Nyirenda, Dziko Nyirenda</td>
+                                                                                                       </tr>
+                                                                                                       <tr class="odd">
+                                                                                                           <td class=" ">2020-04-08</td>
+                                                                                                           <td class=" "><a href="http://cms.streamhouse.org/document/8/view" class="link-button">Test </a></td>
+                                                                                                           <td class=" ">Nyirenda, Dziko Nyirenda</td>
+                                                                                                       </tr>
+                                                                                                   </tbody>
+                                                                                               </table>
+                                
+                                </div>
                                 <div class="tab-pane fade" id="c2" role="tabpanel">b...</div>
                                 <div class="tab-pane fade" id="c3" role="tabpanel" >...</div>
                                 <div class="tab-pane fade" id="c4" role="tabpanel" >...</div>
@@ -292,50 +318,55 @@
                     </div>
 
                     <div class="col-md-8 ml-auto">
-                        <div class="card p-3"><table width="100%" border="0" class="table details">
-    <tbody>
-        <tr>
-            <td width="25%" class="question">Case Id</td>
-            <td width="75%">CR/MB/2020/2</td>
-        </tr>
-        <tr>
-            <td class="question">Date Received</td>
-            <td>2020-03-15 06:23:41</td>
-        </tr>
-        <tr>
-            <td class="question">Status</td>
-            <td><span class="label label-danger">Initiation</span></td>
-        </tr>
-        <tr>
-            <td class="question">Source</td>
-            <td>Public Complaint</td>
-        </tr>
-        <tr>
-            <td class="question">Priority</td>
-            <td>CRITICAL &amp; IMMEDIATE – DO NOT DELEGATE OR POSTPONE</td>
-        </tr>
-        <tr>
-            <td class="question">Jurisdiction</td>
-            <td>Zomba</td>
-        </tr>
-        <tr>
-            <td class="question">Case Type</td>
-            <td>Public officers performing functions corruptly – s.25A CPA</td>
-        </tr>
-        <tr>
-            <td class="question">Title</td>
-            <td>Illegal acquisition of personal properties</td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center" class="question">Details</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                Goverment official was reportedly buying houses for relatives using public funds
-            </td>
-        </tr>
-    </tbody>
+                        <div class="card d-flex flex-row p-3 casedetails">
+                            <h3>Case Detais</h3>
+
+
+                            <div class="col-md-4">
+                                <table width="100%" border="0" class="table details">
+                                    <tbody>
+                                        <tr>
+                                            <td width="25%" class="question">Case Id</td>
+                                            <td width="75%">CR/MB/2020/2</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="question">Date Received</td>
+                                            <td>2020-03-15 06:23:41</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="question">Status</td>
+                                            <td><span class="badge status">Initiation</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="question">Source</td>
+                                            <td>  Complaint</td>
+                                        </tr></table>
+                            </div>
+                            <div class="col-md-8" >  <table width="100%" border="0" class="table details">
+    <tr>
+        <td class="question">Priority</td>
+        <td>   <span class="badge warning mr-2"> <i></i>Critical&Immediate</span> <small>DO NOT DELEGATE OR POSTPONE</small></td>
+    </tr>
+    <tr>
+        <td class="question">Jurisdiction</td>
+        <td>Zomba</td>
+    </tr>
+    <tr>
+        <td class="question">Case Type</td>
+        <td>Public officers performing functions corruptly – s.25A CPA</td>
+    </tr>
+    <tr>
+        <td class="question">Title</td>
+        <td>Illegal acquisition of personal properties</td>
+    </tr>
 </table></div>
+                            <div class="end-details col-md-12">   Goverment official was reportedly buying houses for relatives using public funds</div>
+                           
+                                   
+                                  
+                                </tbody>
+                            </table>
+                        </div>
 
 
 

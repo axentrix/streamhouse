@@ -1,19 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45" viewBox="0 0 45 45">
-  <defs>
-    <filter id="Ellipse_5" x="0" y="0" width="45" height="45" filterUnits="userSpaceOnUse">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="currentstep" transform="translate(9 6)">
-    <g id="Component_35_3" data-name="Component 35 – 3">
-      <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Ellipse_5)">
-        <circle id="Ellipse_5-2" data-name="Ellipse 5" cx="13.5" cy="13.5" r="13.5" transform="translate(9 6)" fill="#fff"/>
-      </g>
-      <path id="Polygon_1" data-name="Polygon 1" d="M4.5,0,9,5H0Z" transform="translate(18 17) rotate(180)" fill="#ec4a4a"/>
-    </g>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 37.5 37.5" style="enable-background:new 0 0 37.5 37.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#EC4A4A;}
+</style>
+<g id="currentstep" transform="translate(9 6)">
+	<g id="Component_35_3">
+		<g transform="matrix(1, 0, 0, 1, -9, -6)">
+			<circle id="Ellipse_5-2" class="st0" cx="18.8" cy="18.8" r="18.8"/>
+		</g>
+		<path id="Polygon_1" class="st1" d="M9.8,17.6l-6.3-7H16L9.8,17.6z"/>
+	</g>
+</g>
 </svg>
