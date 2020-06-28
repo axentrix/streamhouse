@@ -478,7 +478,8 @@ footer {
 .copyright {
    /*flex: 0 0 100%;*/
    font-size:12px;
-   color:greybg;
+   color:@darkbg;
+   margin-bottom:10px;
 }
 
 
@@ -532,7 +533,7 @@ footer {
 /*Content*/
 
 .card {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     box-shadow: 0 0 0.875rem 0 rgba(53,64,82,.15);
 }
 
@@ -866,90 +867,97 @@ svg {
 }
 
 
-.casedetails{
+.casedetails {
+    align-self: flex-end;
 
-    align-self:flex-end;
+
+    .table td {
+        padding: .45rem;
+    }
+
+    h3 {
+        padding: 0 1.2rem;
+    }
 }
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: @maincolor;
-    background-color: @greybg;
-}
-
-table {
-    font-size: 14px;
-    font-weight: 400;
-
-    td.question {
-        padding-left: 3px;
-        padding-right: 3px;
-        font-weight:300;
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: @maincolor;
+        background-color: @greybg;
     }
 
-    td {
-        border: solid 0px transparent !important;
-    }
+    table {
+        font-size: 14px;
+        font-weight: 400;
 
-    tr:nth-child(2n+1) {
-        background: @oddrowbg;
-    }
+        td.question {
+            padding-left: 3px;
+            padding-right: 3px;
+            font-weight: 300;
+        }
 
-    &.table-striped tbody tr:nth-of-type(odd) {
-        background-color: @oddrowbg;
-    }
+        td {
+            border: solid 0px transparent !important;
+        }
 
-    thead {
+        tr:nth-child(2n+1) {
+            background: @oddrowbg;
+        }
 
-        tr {
-            background: transparent !important;
+        &.table-striped tbody tr:nth-of-type(odd) {
+            background-color: @oddrowbg;
+        }
 
-            th {
-                border-top: 0px solid #fff !important;
-                text-transform: uppercase;
-                border: solid 0px transparent !important;
+        thead {
+
+            tr {
+                background: transparent !important;
+
+                th {
+                    border-top: 0px solid #fff !important;
+                    text-transform: uppercase;
+                    border: solid 0px transparent !important;
+                }
             }
         }
     }
-}
 
-.substeps {
+    .substeps {
 
-    a {
-        font-size: 14px;
-        font-family: Roboto;
+        a {
+            font-size: 14px;
+            font-family: Roboto;
 
-        &.pastactivity {
-            color: @bodytext;
-            font-weight: bold;
-        }
+            &.pastactivity {
+                color: @bodytext;
+                font-weight: bold;
+            }
 
 
-        &.completed::before {
-            position: relative;
-            display: inline-block;
-            content: "L";
-            font-size: 20px;
-            top: 0px;
-            left: 2px;
-            margin-right: 5px;
-            font-family: arial;
-            -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
-            -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
-            transform: scaleX(-1) rotate(-35deg);
-            color: @maincolor;
-        }
+            &.completed::before {
+                position: relative;
+                display: inline-block;
+                content: "L";
+                font-size: 20px;
+                top: 0px;
+                left: 2px;
+                margin-right: 5px;
+                font-family: arial;
+                -ms-transform: scaleX(-1) rotate(-35deg); /* IE 9 */
+                -webkit-transform: scaleX(-1) rotate(-35deg); /* Chrome, Safari, Opera */
+                transform: scaleX(-1) rotate(-35deg);
+                color: @maincolor;
+            }
 
-        &:hover {
-            color: @highlightcolordark;
-        }
+            &:hover {
+                color: @highlightcolordark;
+            }
 
-        &:focus {
-            color: @highlightcolordark;
+            &:focus {
+                color: @highlightcolordark;
+            }
         }
     }
-}
-.nav-pills .indicator {
-   
+
+    .nav-pills .indicator {
         background: @maincolor;
         box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,.05);
         border-radius: 50%;
@@ -965,22 +973,29 @@ table {
         transition: top .1s ease-out;
         font-size: .675rem;
         color: #fff;
-   
-}
-.nav-link{
-    position:relative;
-}
-h4 {
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight:600;
-    padding: 1rem 1rem;
-    margin:0;
-}
-h3 {
-    font-size: 24px;
-    font-weight: 600;
-    padding: 1rem 1rem 0;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 1rem 1rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+        padding: 1rem 1rem 0;
+    }
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    border-color: @greybg;
+    background: @highlightcolordark;
+    outline:none !important;
 }
 .content {
     .btn-primary {
@@ -1003,6 +1018,11 @@ h3 {
         &:focus {
             background: @highlightcolordark;
         }
+
+        &:active {
+            border-color: @greybg;
+            background: @highlightcolordark;
+        }
     }
 
     h3 {
@@ -1011,32 +1031,32 @@ h3 {
     }
 }
 
-.end-details{
-    padding:0.6rem;
-    background:@oddrowbg;
-    font-size:13px;
-    text-align:center;
-}
-
-.d-flex {
-
-    flex-wrap:wrap;
-    h3{
-        flex:1 0 100%;
+    .end-details {
+        padding: 0.6rem;
+        background: @oddrowbg;
+        font-size: 13px;
+        text-align: center;
     }
 
-    
-}
+    .d-flex {
+        flex-wrap: wrap;
 
-.casedetails {
-    tr:nth-child(2n+1){
-        background:transparent;
-    }
-    td{
-        font-weight:700;
+        h3 {
+            flex: 1 0 100%;
+        }
     }
 
-    small{display:block;
-        margin-top:10px;
+    .casedetails {
+        tr:nth-child(2n+1) {
+            background: transparent;
+        }
+
+        td {
+            font-weight: 700;
+        }
+
+        small {
+            display: block;
+            margin-top: 10px;
+        }
     }
-}
