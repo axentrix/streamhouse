@@ -15,12 +15,16 @@ a:hover, a:focus{
 }
 .header {
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    position:fixed;
+    z-index:99998;
+    top:0;
+    left:0;
+    width:100%;
 }
-.navbar-brand{
-
-    width:210px;
-    margin-top:-10px;
-    
+.navbar-brand {
+  margin-left:48px;
+    width: 210px;
+    margin-top: -10px;
 }
 .btn-primary-soft {
     border: solid 1px @maincolor;
@@ -143,8 +147,9 @@ footer a{
     }
 }
 
-main {
+main {position:relative;
     margin-left: 80px;
+    top:70px;
     -webkit-transition: margin-left .35s ease-in-out,left .35s ease-in-out;
     transition: margin-left .35s ease-in-out,left .35s ease-in-out;
 }
@@ -439,8 +444,8 @@ main.active {
    fill:@highlightcolor;
 }
 .sidebar-toggler {z-index:199999;
-    
-    margin-left:-15px;
+    position:fixed;
+    left:35px;
     margin-right:40px;
 }
 
@@ -494,6 +499,8 @@ footer {
     }
 
 @media (max-width: 991.98px) {
+
+    
     .lead {
     font-size:1.25rem;
 
@@ -506,7 +513,9 @@ footer {
     
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1025px){
+
+    
 .h2, h2 {
     font-size: calc(1.25625rem + .075vw);
 }
