@@ -469,6 +469,7 @@ a:focus {
   top: 0;
   left: 0;
   width: 100%;
+  background: #ffffff;
 }
 .navbar-brand {
   margin-left: 48px;
@@ -579,6 +580,7 @@ main {
   position: relative;
   margin-left: 80px;
   top: 70px;
+  z-index: 80;
   -webkit-transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out;
   transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out;
 }
