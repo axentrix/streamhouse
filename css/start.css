@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -923,17 +922,29 @@ footer .d-flex {
   border: 0 solid transparent;
   border-radius: .25rem;
 }
-i:after {
-  font-family: "Font Awesome 5 Free";
+/*i:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f128';
+    font-style: normal;
+   
+    
+    padding: .15em;
+    font-size: 1.25em;
+    display: block;
+    width: 1.5em;
+    height: 100%;
+    text-align: center;
+}
+    */
+.fa {
+  width: 32px;
+  font-size: 14px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+  position: relative;
   font-weight: 900;
-  content: '\f128';
-  font-style: normal;
-  padding: .15em;
-  font-size: 1.25em;
-  display: block;
-  width: 1.5em;
-  height: 100%;
-  text-align: center;
 }
 .badge {
   display: inline-flex;
@@ -1258,6 +1269,16 @@ h3 {
   font-weight: 600;
   padding: 1rem 1rem 0;
 }
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f1f2f2;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+}
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
@@ -1313,4 +1334,170 @@ h3 {
 .casedetails small {
   display: block;
   margin-top: 10px;
+}
+/*Dashboard*/
+#dashboard h3 {
+  margin-top: 0 !important;
+}
+#dashboard h2 .statistic {
+  color: #ec4a4a;
+  font-size: 34px;
+  display: block;
+  text-align: center;
+}
+#dashboard h2 span {
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  color: #2f1f3e;
+}
+#dashboard .avatar {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background: #c7ece8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#dashboard .avatar i:before {
+  font-size: 20px;
+}
+#dashboard .avatar img {
+  vertical-align: middle !important;
+}
+.alert-warning {
+  color: #2f1f3e;
+  background-color: #FFF8E2;
+  border-color: #ffc710;
+}
+.alert-warning i {
+  color: #ffc710;
+}
+button {
+  outline: none !important;
+}
+.redcard {
+  background: #ec4a4a;
+  color: #ffffff;
+}
+.redcard .avatar {
+  background: #ffffff !important;
+}
+.redcard .avatar i {
+  color: #ec4a4a;
+}
+.redcard h1 {
+  color: #ffc710;
+}
+.redcard a {
+  color: #ffc710;
+}
+/*Experiement*/
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eceff1;
+  font-size: 24px;
+  height: 50px;
+  padding-bottom: 15px;
+}
+input:focus {
+  outline: 0;
+}
+@media (min-width: 900px) {
+  input {
+    font-size: 32px;
+  }
+}
+.input-buttons {
+  height: 50px;
+  border-bottom: 1px solid #eceff1;
+  padding: 0;
+}
+.input-buttons i {
+  padding: 0 12px;
+  color: #eceff1;
+  float: right;
+}
+@media (min-width: 600px) {
+  .input-buttons .fa-trash-o:hover {
+    color: #ff5252;
+  }
+  .input-buttons .fa-plus:hover {
+    color: #69f0ae;
+  }
+}
+.error {
+  color: #ff5252;
+  display: none;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+.error .fa-times {
+  color: #eceff1;
+  padding: 5px 15px;
+  float: right;
+}
+.error .fa-times:hover {
+  color: #fafafa;
+}
+.error p {
+  margin: 20px 0;
+}
+@media (min-width: 600px) {
+  .error p {
+    font-size: 20px;
+  }
+}
+.todo-list {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 50px;
+}
+.todo-list span {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.todo-list span a {
+  color: #455a64;
+}
+.todo-list span i {
+  padding: 10px 15px;
+}
+.todo-list span .fa-check:hover {
+  color: #69f0ae;
+}
+.todo-list span .fa-trash-o:hover {
+  color: #ff5252;
+}
+.todo-list .complete {
+  color: #90a4ae;
+  text-decoration: line-through;
+}
+.todo-list .complete .check {
+  color: #69f0ae;
+}
+.todo-list .todo {
+  background: #c7ece8;
+  border-bottom: 1px dotted #455a64;
+  color: #455a64;
+  font-size: 20px;
+  list-style: none;
+  padding: 20px 130px 20px 15px;
+  position: relative;
+  white-space: normal;
+}
+p.warning {
+  width: 100%;
+  font-size: 12px;
+  color: #ff0000;
+}
+.error {
+  width: 100%;
 }
