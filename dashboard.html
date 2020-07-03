@@ -418,15 +418,15 @@
                 </div>
 
                 <div class="row align-items-center">
-                    <div class="col-md-4"><div class="card d-flex align-items-center p-2"><h2><span class="statistic">3</span><span>Assigned Tasks</span></h2></div></div>
+                    <div class="col-md-4"><div class="card d-flex align-items-center p-2 stat"><h2><span class="statistic">3</span><a href="#">Assigned Cases</a></h2></div></div>
 
 
 
-                    <div class="col-md-4"><div class="card d-flex align-items-center p-2"><h2><span class="statistic">5</span><span>Initiation Stage</span></h2></div></div>
+                    <div class="col-md-4"><div class="card d-flex align-items-center p-2 stat"><h2><span class="statistic">5</span><a href="#">Cases in the Pipeline</a></h2></div></div>
 
 
 
-                    <div class="col-md-4"><div class="card d-flex align-items-center p-2"><h2><span class="statistic">1</span><span>Investigation Stage</span></h2></div></div>
+                    <div class="col-md-4"><div class="card d-flex align-items-center p-2 stat"><h2><span class="statistic">1</span><a href="#">Reports</a></h2></div></div>
 
                 </div>
 
@@ -447,17 +447,17 @@
                                         </svg>
                                     </span>
                                     <div class="d-inline-block dropdown">
-                                        <a aria-haspopup="true" class="" aria-expanded="false" href="#">
+                                        <a href="#" data-toggle="dropdown">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                 <circle cx="12" cy="12" r="1"></circle>
                                                 <circle cx="12" cy="5" r="1"></circle>
                                                 <circle cx="12" cy="19" r="1"></circle>
                                             </svg>
-                                        </a><div class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Action</button>
-                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Action</button>
-                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Something else here</button>
+                                        </a><div class="dropdown-menu mt-3">
+                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Last Month</button>
+                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Last Week</button>
+                                            <button type="button" tabindex="0" role="menuitem" class="dropdown-item">Last 3 Months</button>
                                         </div>
                                     </div>
                                 </div>
@@ -477,47 +477,24 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex col-xxl-5 col-xl-6">
+                    <div class="d-flex col-xxl-5 col-xl-6" id="small-stats">
                         <div class="w-100">
                             <div class="row">
                                 <div class="col-sm-6">
+
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="row">
-                                                <div class="mt-0 col">
-                                                    <h5 class="card-title">Pending Tasks</h5>
-                                                </div><div class="col-auto col">
-                                                    <div class="avatar">
-                                                        <div class="avatar-title rounded-circle bg-primary-dark">
-                                                            <i class="fa fa-cogs"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h3 class="display-5 mt-1 mb-3">4</h3>
-                                            <div class="mb-0">
-                                                <a href="#">View Pending Tasks</a>
+                                                <div class="mt-0 col"><h5 class="card-title">My Cases Summary</h5></div>
+                                                <canvas id="pie" width="150" height="150"></canvas>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="mt-0 col">
-                                                    <h5 class="card-title">Reviews</h5>
-                                                </div><div class="col-auto col">
-                                                    <div class="avatar">
-                                                        <div class="avatar-title rounded-circle bg-primary-dark">
-                                                            <i class="fa fa-file"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><h3 class="display-5 mt-1 mb-3">4</h3><div class="mb-0">
-                                                <a href="#">View all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><div class="col-sm-6">
+                                   
+                                </div>
+                                
+                                
+                                <div class="col-sm-6">
                                     <div class="card redcard">
                                         <div class="card-body">
                                             <div class="row">
@@ -531,11 +508,29 @@
                                                 </div>
                                             </div><h3 class="display-5 mt-1 mb-3">1</h3><div class="mb-0"><a href="#">View case</a></div>
                                         </div>
-                                    </div><div class="card"><div class="card-body">
-                                <div class="row"><div class="mt-0 col"><h5 class="card-title">Reviews</h5></div>
-                                <div class="col-auto col"><div class="avatar">
-                                    <div class="avatar-title rounded-circle bg-primary-dark"><i class="fa fa-eye"></i>
-                                    </div></div></div></div><h3 class="display-5 mt-1 mb-3">43</h3><div class="mb-0"><a href="#">View all</a></div></div></div>
+                                    </div>
+                              
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="mt-0 col">
+                                                        <h5 class="card-title">Investigation Stage</h5>
+                                                    </div><div class="col-auto col">
+                                                        <div class="avatar">
+                                                            <div class="avatar-title rounded-circle bg-primary-dark">
+                                                                <img src="images/investigation.svg" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h3 class="display-5 mt-1 mb-3">4</h3>
+                                                <div class="mb-0">
+                                                    <a href="#">View Cases</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                  
                                 </div>
                             </div>
                         </div>
@@ -545,32 +540,205 @@
 
                 <div class="row">
 
-                    <div class="col-md-8"><div class="card p-3">
-    <h3>To-do List</h3>
+                    <div class="col-md-4"><div class="card p-3 todo">
+    <h3 class="card-title">To-do List</h3>
+
+    <div class="nav flex-column nav-pills substeps" id="case-initiation-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#c1" role="tab" aria-controls="v-pills-home" aria-selected="true"><span class="badge warning mr-2"> <span class="circle"></span>Urgent</span>Review evidence</a>
+       
+        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#c2" role="tab" aria-controls="v-pills-messages" aria-selected="false"><span class="badge normal mr-2"> <span class="circle"></span>Normal</span>Submit Case Document</a>
+        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#c3" role="tab" aria-controls="v-pills-settings" aria-selected="false"><span class="badge low mr-2"> <span class="circle"></span>Low</span>Update Case Outcome</a>
+     
 
 
-  
-    <div class="container">
-        <div class="row">
-            <input type="text" class="col-xs-8 col-sm-9">
-            <div class="input-buttons col-xs-4 col-sm-3">
-                <a href="#" class="clear-text"><i class="fa fa-trash-o fa-2x"></i></a>
-                <a href="#" class="add-todo btn btn-primary"><i class="fa fa-plus fa-2x"></i>Add Task</a>
-            </div> <!-- div.input-buttons-->
-        </div> <!-- div.row -->
-        <div class="row">
-            <div class="error">
-                <a href="#"><i class="fa fa-times"></i></a>
-                <p class="warning">Please enter a memo task on a case.</p>
-            </div> <!-- div.error -->
-            <!-- Start to-do list -->
-            <ul class="todo-list col-xs-12"></ul>
-        </div> <!-- div.row -->
-    </div> <!-- div.container -->
+    </div>
+
+
 </div>
                     
                     </div>
-                    <div class="col-md-4"><canvas id="pie" width="150" height="150"></canvas></div>
+
+                    <div class="col-md-8">
+   
+       
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="c1" role="tabpanel">
+              
+                <div class="card d-flex flex-row p-3 casedetails"><button id="btn_view" class="btn btn-soft btn-small ml-auto">View Case</button>
+                    <h3 class="pt-3">
+                        
+                            <span class="question">Case Id</span>
+                            <span>CR/MB/2020/2</span>
+                       
+                    </h3>
+
+
+                    <div class="col-md-4">
+                        <table width="100%" border="0" class="table details">
+                            <tbody>
+                               
+                                <tr>
+                                    <td class="question">Date Received</td>
+                                    <td>2020-03-15 06:23:41</td>
+                                </tr>
+                                <tr>
+                                    <td class="question">Status</td>
+                                    <td><span class="badge status">Initiation</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="question">Source</td>
+                                    <td>  Complaint</td>
+                                </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-8">
+                        <table width="100%" border="0" class="table details">
+                            <tr>
+                                <td class="question">Priority</td>
+                                <td>   <span class="badge warning mr-2"> <i class="fa fa-exclamation-triangle"></i>Critical&Immediate</span> <small>DO NOT DELEGATE OR POSTPONE</small></td>
+                            </tr>
+                            <tr>
+                                <td class="question">Jurisdiction</td>
+                                <td>Zomba</td>
+                            </tr>
+                            <tr>
+                                <td class="question">Case Type</td>
+                                <td>Public officers performing functions corruptly – s.25A CPA</td>
+                            </tr>
+                            <tr>
+                                <td class="question">Title</td>
+                                <td>Illegal acquisition of personal properties</td>
+                            </tr>
+                        </table>
+                    </div>
+                 
+
+
+                    </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="c2" role="tabpanel">
+
+                <div class="card d-flex flex-row p-3 casedetails"><button id="btn_view" class="btn btn-soft btn-small ml-auto">View Case</button>
+                    <h3 class="pt-3">
+
+                        <span class="question">Case Id</span>
+                        <span>CC/YR/2020/6</span>
+
+                    </h3>
+
+
+                    <div class="col-md-4">
+                        <table width="100%" border="0" class="table details">
+                            <tbody>
+
+                                <tr>
+                                    <td class="question">Date Received</td>
+                                    <td>2020-03-15 06:23:41</td>
+                                </tr>
+                                <tr>
+                                    <td class="question">Status</td>
+                                    <td><span class="badge status">Initiation</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="question">Source</td>
+                                    <td>  Complaint</td>
+                                </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-8">
+                        <table width="100%" border="0" class="table details">
+                            <tr>
+                                <td class="question">Priority</td>
+                                <td>   <span class="badge normal mr-2"> <span class="circle"></span>Normal Priority</span> </td>
+                            </tr>
+                            <tr>
+                                <td class="question">Jurisdiction</td>
+                                <td>Zomba</td>
+                            </tr>
+                            <tr>
+                                <td class="question">Case Type</td>
+                                <td>Public officers performing functions corruptly – s.25A CPA</td>
+                            </tr>
+                            <tr>
+                                <td class="question">Title</td>
+                                <td>Illegal acquisition of personal properties</td>
+                            </tr>
+                        </table>
+                    </div>
+                   
+
+
+
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="c3" role="tabpanel"><div class="card d-flex flex-row p-3 casedetails">
+    <button id="btn_view" class="btn btn-soft btn-small ml-auto">View Case</button>
+    <h3 class="pt-3">
+
+        <span class="question">Case Id</span>
+        <span>CM/MM/2020/9</span>
+
+    </h3>
+
+
+    <div class="col-md-4">
+        <table width="100%" border="0" class="table details">
+            <tbody>
+
+                <tr>
+                    <td class="question">Date Received</td>
+                    <td>2020-03-15 06:23:41</td>
+                </tr>
+                <tr>
+                    <td class="question">Status</td>
+                    <td><span class="badge status">Initiation</span></td>
+                </tr>
+                <tr>
+                    <td class="question">Source</td>
+                    <td>  Complaint</td>
+                </tr>
+        </table>
+    </div>
+    <div class="col-md-8">
+        <table width="100%" border="0" class="table details">
+            <tr>
+                <td class="question">Priority</td>
+                <td>   <span class="badge low mr-2"> <span class="circle"></span>Low Priority</span> </td>
+            </tr>
+            <tr>
+                <td class="question">Jurisdiction</td>
+                <td>Zomba</td>
+            </tr>
+            <tr>
+                <td class="question">Case Type</td>
+                <td>Public officers performing functions corruptly – s.25A CPA</td>
+            </tr>
+            <tr>
+                <td class="question">Title</td>
+                <td>Illegal acquisition of personal properties</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+
+    </tbody>
+    </table>
+</div></div>
+            
+        </div>
+    
+
+
+    
+</div>
+                    
                 </div>
 
 
@@ -608,7 +776,12 @@
 
 
 
-            new Chart(document.getElementById("pie"), { "type": "doughnut", "data": { "labels": ["Initiation", "Investigation", "Closed"], "datasets": [{ "label": "My First Dataset", "data": [300, 50, 100], "backgroundColor": ["#EC4A4A", "#FFC710", "#8ACFCF"] }] } });
+            new Chart(document.getElementById("pie"), {
+                "type": "doughnut", options: {
+                    legend: {
+                        display: false
+                    }
+                }, "data": { "labels": ["Initiation", "Investigation", "Closed"], "datasets": [{ "label": "My First Dataset", "data": [300, 50, 100], "backgroundColor": ["#EC4A4A", "#FFC710", "#8ACFCF"] }] } });
 
 
             var ctx = document.getElementById('recentactivity')
@@ -714,80 +887,7 @@
 
         });
 
-        $(function () {
-
-            // Input gains focus on document ready
-            //$('input').focus();
-
-            // Define function to add tasks to list
-            function addTodo() {
-                if ($('input').val().trim() == "") {
-                    // Show error message
-                    $('.error').fadeIn(200);
-                } else {
-                    // Hide error message
-                    $('.error').hide();
-
-                    // Get input value
-                    var $todo = $('input').val();
-
-                    // Create new list item
-                    var $newListItem = $('<li class="todo">' + $todo + '<span>' +
-                        '<a href="#" class="check">' + '<i class="fa fa-check fa-lg"></i>' + '</a>' +
-                        '<a href="#" class="delete-todo">' + '<i class="fa fa-trash-o fa-lg"></i>' + '</a>' +
-                        '</span>' + '</li>');
-
-                    // Add list item to end of list
-                    var $addListItem = $('ul').append($newListItem);
-
-                    // Hide list item before fading it into view
-                    $newListItem.hide().fadeIn(500);
-
-                    // Refocus input box for next task
-                    $('input').val("").focus();
-                }
-            };
-
-            // Clear error message when 'x' icon is clicked
-            $('i.fa-times').on('click', function () {
-                $('.error').hide();
-            });
-
-            // Call addTodo function on click
-            $('.add-todo').on('click', addTodo);
-
-
-            // Call addTodo function when enter key is pressed
-            $(document).on('keypress', function (e) {
-                if (e.which == 13) {
-                    addTodo();
-                }
-            });
-
-
-            // Clear typed text and refocus input box
-            $('.clear-text').on('click', function (e) {
-                e.preventDefault();
-                $('input').val("").focus();
-            });
-
-
-            // Mark list item complete
-            $(document).on('click', '.check', function (e) {
-                e.preventDefault();
-                $(this).closest('li').toggleClass('complete');
-            });
-
-
-            // Fade list item and delete from DOM
-            $(document).on('click', '.delete-todo', function (e) {
-                e.preventDefault();
-                $(this).closest('li').fadeOut(500, function () {
-                    $(this).remove();
-                });
-            });
-
-        });
+     
 
 
 
