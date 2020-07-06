@@ -453,6 +453,9 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+h2 {
+  font-size: 24px;
+}
 a {
   color: #2cab9d;
 }
@@ -936,6 +939,7 @@ footer .d-flex {
   margin-right: 10px;
   position: relative;
   font-weight: 900;
+  align-self: center;
 }
 .badge {
   display: inline-flex;
@@ -1312,6 +1316,7 @@ h3 {
 }
 .content .btn-primary {
   display: flex;
+  position: relative;
   border: 0;
   text-align: center;
   text-transform: uppercase;
@@ -1332,6 +1337,10 @@ h3 {
 .content .btn-primary:active {
   border-color: #f1f2f2;
   background: #a23535;
+}
+.content .btn-primary .fa {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .content h3 {
   margin-top: -57px;
@@ -1625,4 +1634,96 @@ table.dataTable thead td {
 }
 table.dataTable .fa {
   margin-right: 0;
+}
+.custom-select {
+  font-size: 13px;
+  color: #2f1f3e;
+}
+label {
+  font-size: 12px;
+  color: #9dafbc;
+  text-transform: uppercase;
+}
+.box-body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box-body .form-group {
+  flex: 0 0 48%;
+}
+.box-body .form-group.textarea-oneline {
+  flex: 1 1 100%;
+}
+.priority {
+  background: #f8f9f9;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.priority h5 {
+  font-size: 12px;
+  font-weight: normal;
+  padding-bottom: 5px;
+  color: #9dafbc;
+  text-transform: uppercase;
+  flex: 0 0 100%;
+}
+.badge {
+  align-self: stretch;
+  align-items: flex-start;
+  flex: 1 0 auto;
+}
+.badge .custom-control-label {
+  padding-left: 25px;
+  text-align: left;
+  color: #2f1f3e;
+}
+.badge .custom-control-label:before {
+  left: 0rem;
+}
+.badge .custom-control-label small {
+  display: block;
+}
+.form-control {
+  color: #2f1f3e;
+}
+#pri24 + label:before {
+  background-color: #ff0000;
+  border-color: #ff0000;
+}
+#pri25 + label:before {
+  background-color: #ec4a4a;
+  border-color: #ec4a4a;
+}
+#pri26 + label:before {
+  background-color: #ff5715;
+  border-color: #ff5715;
+}
+#pri26 + label:before {
+  background-color: #ffc710;
+  border-color: #ffc710;
+}
+#pri69 + label:before {
+  background-color: #3586c8;
+  border-color: #3586c8;
+}
+#pri27 + label:before {
+  background-color: #26b282;
+  border-color: #26b282;
+}
+select option:checked,
+select option:hover {
+  box-shadow: 0 0 10px 100px #c7ece8 inset;
+}
+select:active,
+select:hover {
+  outline-color: #ff0000;
+}
+.form-control:focus {
+  color: #2f1f3e;
+  background-color: #fff;
+  border-color: #e8e4ec;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #c7ece8;
 }

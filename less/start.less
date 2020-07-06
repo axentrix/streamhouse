@@ -6,6 +6,11 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+
+h2{
+
+    font-size:24px
+}
 a{
     color:@linkcolor;
 }
@@ -582,6 +587,7 @@ footer {
     margin-right: 10px;
     position: relative;
     font-weight: 900;
+    align-self:center;
 }
 
 
@@ -1046,7 +1052,7 @@ footer {
         outline: none !important;
         display: flex;
         border: 0;
-        color:#ffffff;
+        color: #ffffff;
         text-align: center;
         text-transform: uppercase;
         font-size: 13px;
@@ -1059,6 +1065,7 @@ footer {
 
     .btn-primary {
         display: flex;
+        position:relative;
         border: 0;
         text-align: center;
         text-transform: uppercase;
@@ -1081,6 +1088,23 @@ footer {
         &:active {
             border-color: @greybg;
             background: @highlightcolordark;
+        }
+
+
+
+        
+         
+
+            .fa {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            &[type="submit"] {
+                .fa {
+               
+                }
+           
         }
     }
 
@@ -1221,18 +1245,18 @@ footer {
 .todo {
 
     .nav-pills .nav-link {
-        font-weight:500;
-        color:@bodytext;
-        padding:5px 0;
+        font-weight: 500;
+        color: @bodytext;
+        padding: 5px 0;
     }
 
     .badge {
         align-items: flex-start;
         justify-content: flex-start;
         line-height: 20px;
-    }
 
-   
+      
+    }
 }
 h3 {
     .question {
@@ -1441,4 +1465,121 @@ table.dataTable {
     .fa{
         margin-right:0;
     }
+}
+
+
+.custom-select{
+    font-size:13px;
+    color:@bodytext;
+}
+label{
+    font-size:12px;
+    color:@thirdiarycolor;
+    text-transform:uppercase;
+}
+
+
+
+.box-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .form-group {
+        flex: 0 0 48%;
+        &.textarea-oneline{
+
+            flex:1 1 100%;
+        }
+    }
+}
+.priority{background:@oddrowbg;
+          padding:10px;
+    display:flex;
+    flex-wrap:wrap;
+    h5{font-size:12px;
+       font-weight:normal;
+       padding-bottom:5px;
+       color:@thirdiarycolor;
+       text-transform:uppercase;
+        flex:0 0 100%;
+    }
+}
+.badge {
+    align-self: stretch;
+    align-items: flex-start;
+    flex: 1 0 auto;
+
+    .custom-control-label {
+
+        &:before {
+            left: 0rem;
+        }
+
+        padding-left: 25px;
+        text-align: left;
+        color: @bodytext;
+
+        small {
+            display: block;
+        }
+
+      
+    }
+}
+
+
+.form-control{
+
+    color:@bodytext;
+}
+
+
+#pri24 + label:before  {
+    background-color: @red;
+    border-color: @red;
+}
+
+
+#pri25 + label:before {
+    background-color: @maincolor;
+    border-color: @maincolor;
+}
+
+
+
+#pri26 + label:before {
+    background-color: @orange;
+    border-color: @orange;
+}
+
+
+#pri26 + label:before {
+    background-color: @secondarycolor;
+    border-color: @secondarycolor;
+}
+#pri69 + label:before {
+    background-color: @blue;
+    border-color: @blue;
+}
+#pri27 + label:before {
+    background-color: @green;
+    border-color: @green;
+}
+
+select option:checked,
+select option:hover {
+    box-shadow: 0 0 10px 100px @highlightcolor inset;
+}
+
+select:active, select:hover {
+    outline-color: red
+}
+
+.form-control:focus {
+    color: @bodytext;
+    background-color: #fff;
+    border-color: @bordercolor;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem @highlightcolor;
 }
