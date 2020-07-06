@@ -217,7 +217,6 @@ main.active {
 
 
                     svg path {
-                       
                         fill: @secondarycolor;
                     }
                 }
@@ -235,8 +234,14 @@ main.active {
 
                 .icon {
                     display: block;
-                    fill:#ffffff;
+                    fill: #ffffff;
                     margin-bottom: 10px;
+                    #newuser{
+                        height:22px;
+                    }
+                    svg {
+                        height: 26px;
+                    }
                 }
             }
         }
@@ -1511,9 +1516,10 @@ label{
     flex: 1 0 auto;
 
     .custom-control-label {
-
+        cursor:pointer;
         &:before {
-            left: 0rem;
+            left: 0.2rem;
+           border-width:2px;
         }
 
         padding-left: 25px;
@@ -1535,35 +1541,55 @@ label{
 }
 
 
-#pri24 + label:before  {
-    background-color: @red;
+#pri24 + label:before {
+    background-color: @white;
     border-color: @red;
 }
-
+#pri24:checked ~ .custom-control-label {
+    &::before {
+        background-color: @red;
+    }
+}
 
 #pri25 + label:before {
-    background-color: @maincolor;
+    background-color: @white;
     border-color: @maincolor;
 }
 
-
+#pri25:checked ~ .custom-control-label {
+    &::before {
+        background-color: @maincolor;
+    }
+}
 
 #pri26 + label:before {
-    background-color: @orange;
+    background-color: @white;
     border-color: @orange;
 }
 
 
 #pri26 + label:before {
-    background-color: @secondarycolor;
+    background-color: @white;
     border-color: @secondarycolor;
 }
+
+#pri26:checked ~ .custom-control-label {
+    &::before {
+        background-color: @secondarycolor;
+    }
+}
 #pri69 + label:before {
-    background-color: @blue;
+    background-color: @white;
     border-color: @blue;
 }
+
+#pri69:checked ~ .custom-control-label {
+    &::before {
+        background-color: @blue;
+    }
+}
 #pri27 + label:before {
-    background-color: @green;
+    background-color: @white;
     border-color: @green;
 }
 
@@ -1571,7 +1597,11 @@ select option:checked,
 select option:hover {
     box-shadow: 0 0 10px 100px @highlightcolor inset;
 }
-
+#pri27:checked ~ .custom-control-label {
+    &::before {
+        background-color: @green;
+    }
+}
 select:active, select:hover {
     outline-color: red
 }
@@ -1582,4 +1612,30 @@ select:active, select:hover {
     border-color: @bordercolor;
     outline: 0;
     box-shadow: 0 0 0 0.2rem @highlightcolor;
+}
+
+.btn-floating {
+    position: fixed;
+    top: 40px;
+    right: 400px;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+    display: flex;
+    justify-content: center;
+    line-height: 61px;
+    color: @white;
+    text-align: center;
+    background: @maincolor;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index: 99999;
+
+    .fa {
+        margin: 0;
+    }
+
+    &:hover {
+        background: darken(@maincolor, 10%);
+        color: @white;
+    }
 }

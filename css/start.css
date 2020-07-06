@@ -649,6 +649,12 @@ main.active {
   fill: #ffffff;
   margin-bottom: 10px;
 }
+#leftBar ul li a .icon #newuser {
+  height: 22px;
+}
+#leftBar ul li a .icon svg {
+  height: 26px;
+}
 /*Top Nav*/
 .nav-item {
   display: flex;
@@ -1675,12 +1681,14 @@ label {
   flex: 1 0 auto;
 }
 .badge .custom-control-label {
+  cursor: pointer;
   padding-left: 25px;
   text-align: left;
   color: #2f1f3e;
 }
 .badge .custom-control-label:before {
-  left: 0rem;
+  left: 0.2rem;
+  border-width: 2px;
 }
 .badge .custom-control-label small {
   display: block;
@@ -1689,32 +1697,47 @@ label {
   color: #2f1f3e;
 }
 #pri24 + label:before {
-  background-color: #ff0000;
+  background-color: #ffffff;
   border-color: #ff0000;
 }
+#pri24:checked ~ .custom-control-label::before {
+  background-color: #ff0000;
+}
 #pri25 + label:before {
-  background-color: #ec4a4a;
+  background-color: #ffffff;
   border-color: #ec4a4a;
 }
+#pri25:checked ~ .custom-control-label::before {
+  background-color: #ec4a4a;
+}
 #pri26 + label:before {
-  background-color: #ff5715;
+  background-color: #ffffff;
   border-color: #ff5715;
 }
 #pri26 + label:before {
-  background-color: #ffc710;
+  background-color: #ffffff;
   border-color: #ffc710;
 }
+#pri26:checked ~ .custom-control-label::before {
+  background-color: #ffc710;
+}
 #pri69 + label:before {
-  background-color: #3586c8;
+  background-color: #ffffff;
   border-color: #3586c8;
 }
+#pri69:checked ~ .custom-control-label::before {
+  background-color: #3586c8;
+}
 #pri27 + label:before {
-  background-color: #26b282;
+  background-color: #ffffff;
   border-color: #26b282;
 }
 select option:checked,
 select option:hover {
   box-shadow: 0 0 10px 100px #c7ece8 inset;
+}
+#pri27:checked ~ .custom-control-label::before {
+  background-color: #26b282;
 }
 select:active,
 select:hover {
@@ -1726,4 +1749,27 @@ select:hover {
   border-color: #e8e4ec;
   outline: 0;
   box-shadow: 0 0 0 0.2rem #c7ece8;
+}
+.btn-floating {
+  position: fixed;
+  top: 40px;
+  right: 400px;
+  border-radius: 50%;
+  width: 61px;
+  height: 61px;
+  display: flex;
+  justify-content: center;
+  line-height: 61px;
+  color: #ffffff;
+  text-align: center;
+  background: #ec4a4a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+}
+.btn-floating .fa {
+  margin: 0;
+}
+.btn-floating:hover {
+  background: #e71c1c;
+  color: #ffffff;
 }
