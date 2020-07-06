@@ -643,6 +643,7 @@ main.active {
 }
 #leftBar ul li a .icon {
   display: block;
+  fill: #ffffff;
   margin-bottom: 10px;
 }
 /*Top Nav*/
@@ -928,7 +929,7 @@ footer .d-flex {
   border-radius: .25rem;
 }
 .fa {
-  width: 32px;
+  /* width: 32px;*/
   font-size: 14px;
   display: inline-block;
   text-align: right;
@@ -1486,4 +1487,142 @@ h3 .question {
   height: 36px;
   font-size: 13px;
   padding: 0.45rem 0.66rem;
+}
+.mdc-data-table__header-row-checkbox .mdc-checkbox__native-control :enabled:checked ~ .mdc-checkbox__background,
+.mdc-data-table__header-row-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+.mdc-data-table__header-row-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background,
+.mdc-data-table__row-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
+.mdc-data-table__row-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background,
+.mdc-data-table__row-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+  background: #ffc710;
+  border: solid 1px #ffc710;
+}
+.mdc-data-table__row,
+.mdc-data-table {
+  border: solid 0px #f1f2f2;
+}
+.dataTables_wrapper {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #9dafbc;
+}
+.dataTables_wrapper table {
+  color: #2f1f3e;
+}
+#mycases_table_length {
+  width: 50%;
+}
+.dataTables_filter {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dataTables_filter input {
+  display: inline-block;
+}
+div.dataTables_wrapper div.dataTables_filter label,
+div.dataTables_wrapper div.dataTables_length label {
+  text-align: left;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+div.dataTables_wrapper div.dataTables_filter label select,
+div.dataTables_wrapper div.dataTables_length label select {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+  flex: 0 0 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f8f9f9;
+}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: #ffffff !important;
+  border: 0px solid #979797;
+  background: #c7ece8;
+}
+tfoot {
+  display: none;
+}
+table.dataTable tbody th,
+table.dataTable tbody td {
+  padding: 12px 10px;
+  font-size: 13px;
+}
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #9dafbc;
+}
+.dataTables_paginate {
+  margin-left: auto;
+}
+table.dataTable thead .sorting_desc {
+  position: relative;
+  background-image: none;
+}
+table.dataTable thead .sorting_desc:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 0px;
+  top: 0px;
+  background-image: url(../images/ascdesc.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -104px 0;
+}
+table.dataTable thead .sorting_asc {
+  position: relative;
+  background-image: none;
+}
+table.dataTable thead .sorting_asc:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 0px;
+  top: 0px;
+  background-image: url(../images/ascdesc.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -48px 0;
+}
+table.dataTable thead .sorting {
+  position: relative;
+  background-image: none;
+}
+table.dataTable thead .sorting:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 0px;
+  top: 0px;
+  background-image: url(../images/ascdesc.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 18px 0;
+}
+table.dataTable thead th,
+table.dataTable thead td {
+  padding: 10px;
+}
+table.dataTable .fa {
+  margin-right: 0;
 }

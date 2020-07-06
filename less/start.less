@@ -230,6 +230,7 @@ main.active {
 
                 .icon {
                     display: block;
+                    fill:#ffffff;
                     margin-bottom: 10px;
                 }
             }
@@ -574,13 +575,13 @@ footer {
 
 
 .fa {
-    width: 32px;
+    /* width: 32px;*/
     font-size: 14px;
     display: inline-block;
     text-align: right;
     margin-right: 10px;
-    position:relative;
-    font-weight:900;
+    position: relative;
+    font-weight: 900;
 }
 
 
@@ -1284,4 +1285,160 @@ h3 {
     height: 36px;
     font-size: 13px;
     padding: 0.45rem 0.66rem;
+}
+
+
+.mdc-data-table__header-row-checkbox .mdc-checkbox__native-control
+:enabled:checked ~ .mdc-checkbox__background, .mdc-data-table__header-row-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background, .mdc-data-table__header-row-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background, .mdc-data-table__row-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background, .mdc-data-table__row-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background, .mdc-data-table__row-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background{
+
+    background:@secondarycolor;
+    border:solid 1px @secondarycolor;
+
+}
+
+.mdc-data-table__row, .mdc-data-table {
+    border: solid 0px @greybg;
+}
+
+.dataTables_wrapper {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color:@thirdiarycolor;
+
+    table{
+        color:@bodytext;
+    }
+}
+#mycases_table_length{
+    width:50%;
+}
+.dataTables_filter {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    input {
+        display: inline-block;
+    }
+}
+
+div.dataTables_wrapper div.dataTables_filter label, div.dataTables_wrapper div.dataTables_length label {
+    text-align: left;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+   
+
+    select {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+        flex: 0 0 100px;
+    }
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: @oddrowbg;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #ffffff !important;
+    border: 0px solid #979797;
+   
+    background: @highlightcolor;
+}
+
+tfoot{
+    display:none;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 12px 10px;
+   font-size: 13px;
+}
+
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+    color: @thirdiarycolor;
+}
+
+.dataTables_paginate
+{
+    margin-left:auto;
+
+}
+table.dataTable thead .sorting_desc {
+    position: relative;
+    background-image: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        right: 0px;
+        top: 0px;
+       
+        background-image: url(../images/ascdesc.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -104px 0;
+    }
+}
+
+table.dataTable thead .sorting_asc {
+    position: relative;
+    background-image: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        right: 0px;
+        top: 0px;
+     
+        background-image: url(../images/ascdesc.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -48px 0;
+    }
+}
+table.dataTable thead .sorting {
+    position: relative;
+    background-image: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        right: 0px;
+        top: 0px;
+      
+        background-image: url(../images/ascdesc.svg);
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:18px 0;
+    }
+}
+table.dataTable thead th, table.dataTable thead td{
+    padding:10px;
+}
+
+table.dataTable {
+
+    .fa{
+        margin-right:0;
+    }
 }
