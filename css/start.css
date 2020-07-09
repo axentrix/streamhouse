@@ -1303,7 +1303,7 @@ h3 {
 .btn-primary:not(:disabled):not(.disabled):active,
 .show > .btn-primary.dropdown-toggle {
   border-color: #f1f2f2;
-  background: #a23535;
+  background: #a23535 !important;
   outline: none !important;
 }
 .content .btn-soft {
@@ -1324,12 +1324,13 @@ h3 {
   display: flex;
   position: relative;
   border: 0;
-  text-align: center;
+  text-align: center !important;
+  justify-content: center;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
-  border-radius: 80px;
-  background: #ec4a4a;
+  border-radius: 80px !important;
+  background: #ec4a4a !important;
   padding: 0.7rem 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   z-index: 20;
@@ -1772,4 +1773,177 @@ select:hover {
 .btn-floating:hover {
   background: #e71c1c;
   color: #ffffff;
+}
+/*Login styles*/
+.loginholder {
+  /* LABEL ======================================= */
+  /* active state */
+  /* BOTTOM BARS ================================= */
+  /* active state */
+  /* HIGHLIGHTER ================================== */
+  /* active state */
+  /* ANIMATIONS ================ */
+}
+.loginholder .group {
+  position: relative;
+  margin-bottom: 45px;
+}
+.loginholder .group .fa {
+  position: absolute;
+  bottom: 10px;
+  color: #ec4a4a;
+}
+.loginholder input {
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #9dafbc;
+  text-indent: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #2f1f3e;
+}
+.loginholder input:focus {
+  outline: none;
+}
+.loginholder label {
+  color: #9dafbc;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  position: absolute;
+  pointer-events: none;
+  left: 25px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.loginholder input:focus ~ label,
+.loginholder input:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 14px;
+  color: #ec4a4a;
+}
+.loginholder .bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.loginholder .bar:before,
+.loginholder .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #ec4a4a;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.loginholder .bar:before {
+  left: 50%;
+}
+.loginholder .bar:after {
+  right: 50%;
+}
+.loginholder input:focus ~ .bar:before,
+.loginholder input:focus ~ .bar:after {
+  width: 50%;
+}
+.loginholder .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.loginholder input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #c7ece8;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #c7ece8;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #c7ece8;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+.loginholder .ltext {
+  text-align: center;
+  color: #9dafbc;
+  font-size: 13px;
+}
+#login {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: url("../images/login.jpg") 0 0 no-repeat;
+  background-size: cover;
+  margin-left: 0;
+}
+#login:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(42deg, #ec4a4a 0%, #c7ece8 50%, #ffc710 100%);
+  opacity: 0.8;
+}
+#login .loginholder {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  align-self: stretch;
+}
+#login .loginholder h1 {
+  align-self: flex-start;
+  padding-top: 20px;
+}
+#login .loginholder .ltext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
