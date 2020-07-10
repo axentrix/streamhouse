@@ -1294,10 +1294,13 @@ h3 {
   font-weight: 600;
 }
 .card-header {
-  padding: .75rem 1.25rem;
+  padding: .95rem;
   margin-bottom: 0;
-  background-color: #f1f2f2;
+  background-color: #c7ece8;
   border-bottom: 0px solid rgba(0, 0, 0, 0.125);
+}
+.card-header h5 {
+  color: #2f1f3e;
 }
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
@@ -1662,19 +1665,19 @@ label {
 .box-body .form-group.textarea-oneline {
   flex: 1 1 100%;
 }
-.priority {
-  background: #f8f9f9;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.priority h5 {
+h5 {
   font-size: 12px;
   font-weight: normal;
   padding-bottom: 5px;
   color: #9dafbc;
   text-transform: uppercase;
   flex: 0 0 100%;
+}
+.priority {
+  background: #f8f9f9;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .badge {
   align-self: stretch;
@@ -1946,4 +1949,70 @@ select:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/*Circular*/
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100px;
+  height: 100px;
+}
+.single-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single-chart a {
+  text-align: center;
+  font-size: 12px;
+}
+.circle-bg {
+  fill: none;
+  stroke: #f1f2f2;
+  stroke-width: 3.8;
+}
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circular-chart.pri-one .circle {
+  stroke: #ec4a4a;
+}
+.circular-chart.pri2 .circle {
+  stroke: #ff5715;
+}
+.circular-chart.pri3 .circle {
+  stroke: #ffc710;
+}
+.circular-chart.pri4 .circle {
+  stroke: #3586c8;
+}
+.circular-chart.pri5 .circle {
+  stroke: #26b282;
+}
+.percentage {
+  fill: #666;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
+.prioritycards .card {
+  width: 18%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 7px;
+  margin-right: 7px;
 }
